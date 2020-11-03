@@ -11,7 +11,7 @@ public class Remote {
     public Remote() {
     }
 
-    public void setRemoteListener(Car car){
+    public void setRemoteListener(Car car) {
         Log.d(TAG, "setRemoteListener: remote connected");
     }
 

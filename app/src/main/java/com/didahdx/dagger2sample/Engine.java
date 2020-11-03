@@ -1,10 +1,7 @@
 package com.didahdx.dagger2sample;
 
-import javax.inject.Inject;
+public interface Engine {
+    void start();
 
-public class Engine {
-
-    @Inject
-    public Engine() {
-    }
+    void stop();
 }

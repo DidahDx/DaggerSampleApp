@@ -4,13 +4,17 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.didahdx.dagger2sample.di.components.CarComponent;
+import com.didahdx.dagger2sample.di.components.DaggerCarComponent;
+
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
     Car car;
 
     //field injection can not be private
-    @Inject Car car2;
+    @Inject
+    Car car2;
 
 
     @Override

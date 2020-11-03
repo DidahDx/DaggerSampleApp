@@ -15,13 +15,14 @@ public class Car {
         this.wheels = wheels;
     }
 
-    public void drive(){
+    public void drive() {
+        engine.start();
         Log.d(TAG, "drive: ");
     }
 
     //method injection
     @Inject
-    public void enableRemote(Remote remote){
+    public void enableRemote(Remote remote) {
         remote.setRemoteListener(this);
     }
 
