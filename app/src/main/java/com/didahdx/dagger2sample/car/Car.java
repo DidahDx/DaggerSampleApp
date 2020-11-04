@@ -1,4 +1,4 @@
-package com.didahdx.dagger2sample;
+package com.didahdx.dagger2sample.car;
 
 import android.util.Log;
 

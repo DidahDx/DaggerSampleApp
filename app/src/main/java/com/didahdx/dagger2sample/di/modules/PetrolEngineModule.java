@@ -1,7 +1,7 @@
 package com.didahdx.dagger2sample.di.modules;
 
-import com.didahdx.dagger2sample.Engine;
-import com.didahdx.dagger2sample.PetrolEngine;
+import com.didahdx.dagger2sample.car.Engine;
+import com.didahdx.dagger2sample.car.PetrolEngine;
 
 import dagger.Binds;
 import dagger.Module;

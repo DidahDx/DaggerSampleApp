@@ -1,4 +1,4 @@
-package com.didahdx.dagger2sample;
+package com.didahdx.dagger2sample.car;
 
 public class Wheels {
     //when we dont own this class , class comes from a library

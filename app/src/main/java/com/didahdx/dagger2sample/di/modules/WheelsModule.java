@@ -1,14 +1,14 @@
 package com.didahdx.dagger2sample.di.modules;
 
-import com.didahdx.dagger2sample.Rims;
-import com.didahdx.dagger2sample.Tire;
-import com.didahdx.dagger2sample.Wheels;
+import com.didahdx.dagger2sample.car.Rims;
+import com.didahdx.dagger2sample.car.Tire;
+import com.didahdx.dagger2sample.car.Wheels;
 
 import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class WheelsModule {
+public abstract class WheelsModule {
 
     @Provides
     static Rims providesRims() {

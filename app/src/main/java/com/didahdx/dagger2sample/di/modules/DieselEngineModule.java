@@ -1,7 +1,7 @@
 package com.didahdx.dagger2sample.di.modules;
 
-import com.didahdx.dagger2sample.DieselEngine;
-import com.didahdx.dagger2sample.Engine;
+import com.didahdx.dagger2sample.car.DieselEngine;
+import com.didahdx.dagger2sample.car.Engine;
 
 import dagger.Module;
 import dagger.Provides;
@@ -15,7 +15,12 @@ public class DieselEngineModule {
     }
 
     @Provides
-    Engine providesDieselEngine() {
-        return new DieselEngine(horsePower);
+    int providesHorsePower(){
+        return horsePower;
+    }
+
+    @Provides
+    Engine providesDieselEngine(DieselEngine engine) {
+        return engine;
     }
 }
