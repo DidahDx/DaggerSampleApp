@@ -1,7 +1,10 @@
 package com.didahdx.dagger2sample.di.components;
 
+import android.app.AlertDialog.Builder;
+
 import com.didahdx.dagger2sample.car.Car;
 import com.didahdx.dagger2sample.MainActivity;
+import com.didahdx.dagger2sample.di.PerActivity;
 import com.didahdx.dagger2sample.di.modules.PetrolEngineModule;
 import com.didahdx.dagger2sample.di.modules.WheelsModule;
 
@@ -10,8 +13,9 @@ import javax.inject.Named;
 import dagger.BindsInstance;
 import dagger.Component;
 
-@Component(modules = {WheelsModule.class, PetrolEngineModule.class})
-public interface CarComponent {
+@PerActivity
+@Component(dependencies = AppComponent.class,modules = {WheelsModule.class, PetrolEngineModule.class})
+public interface ActivityComponent {
     Car getCar();
 
     void inject(MainActivity mainActivity);
@@ -25,6 +29,8 @@ public interface CarComponent {
         @BindsInstance
         Builder engineCapacity(@Named("engine capacity") int engineCapacity);
 
-        CarComponent build();
+        Builder appComponent(AppComponent appComponent);
+
+        ActivityComponent build();
     }
 }
