@@ -6,4 +6,10 @@ import javax.inject.Singleton;
 
 public class Driver {
     //we dont own this class
+
+    String name;
+
+    public Driver(String name) {
+        this.name = name;
+    }
 }

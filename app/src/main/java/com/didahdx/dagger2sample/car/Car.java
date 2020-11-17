@@ -22,7 +22,7 @@ public class Car {
 
     public void drive() {
         engine.start();
-        Log.d(TAG, driver+" drive: "+this);
+        Log.d(TAG, driver+" "+driver.name+" drive: "+this);
     }
 
     //method injection

@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.didahdx.dagger2sample.di.components.AppComponent;
 import com.didahdx.dagger2sample.di.components.DaggerAppComponent;
+import com.didahdx.dagger2sample.di.modules.DriverModule;
 
 
 public class App extends Application {
@@ -12,7 +13,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        appComponent = DaggerAppComponent.create();
+        appComponent = DaggerAppComponent.factory().create(new DriverModule("Dx"));
     }
 
     public AppComponent getAppComponent() {
